@@ -1,0 +1,9 @@
+#Run "$crontab -e" in terminal and append it to the crontab config:
+
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+10 0 * * * /sbin/shutdown -r now
+10 8 * * * /sbin/shutdown -r now
+10 16 * * * /sbin/shutdown -r now
+@reboot sleep 60 && cd /opt/iNode/ && /opt/iNode/run_iNode.sh
